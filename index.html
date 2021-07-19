@@ -395,6 +395,11 @@
                     </li>
                 </ul>
             </div>
+            <div class="footer-subscription">
+                <p></p>
+                <input>
+                <batton></batton>
+            </div>
         </div>
 
     </footer>
@@ -405,10 +410,34 @@
                     <use href="./images/sprite.svg#icon-close-black"></use>
                 </svg>
             </button>
+            <form action="#" class="modal-form">
+                <p class="modal-form-head">Оставьте свои данные, мы вам перезвоним</p>
+                <label class="modal-form-field">Имя
+                    <input type="text" class="modal-form-input" name="user name">
+                </label>
+                <label class="modal-form-field">Телефон
+                    <input type="tel" class="modal-form-input" name="tel">
+                </label>
+                <label class="modal-form-field">Почта
+                    <input type="email" class="modal-form-input" name="email">
+                </label>
+                <label class="modal-form-field">Комментарии
+                    <textarea name="user message" class="modal-form-message" placeholder="Ваше сообщение"></textarea>
+                </label>
+                <input type="checkbox" class="modal-form-checkbox" id="accept-policy">
+                <label for="accept-policy" class="modal-form-checkbox">Соглашаюсь с рассылкой и принимаю <a href="#"
+                        class="modal-form-label-link">Условия
+                        договора</a>
+                </label>
+                <button type="submit" class="modal-form-btn">Отправить</button>
+
+
+            </form>
+            </button>
 
         </div>
     </div>
-    <script src="./js/modal.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
 </body>
 
 </html>
