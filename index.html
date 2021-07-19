@@ -63,7 +63,7 @@
         <!--Почему мы-->
         <section class="advantages section">
             <div class="container">
-                <h3 hidden>наши особенности</h3>
+                <h3 class="visually-hidden">наши особенности</h3>
                 <ul class="advantages-icon link">
                     <li class="advantages-icon-field">
                         <svg class="advantages-icon-pic">
@@ -413,20 +413,40 @@
             <form action="#" class="modal-form">
                 <p class="modal-form-head">Оставьте свои данные, мы вам перезвоним</p>
                 <label class="modal-form-field">Имя
-                    <input type="text" class="modal-form-input" name="user name">
+                    <span class="modal-form-wrapper">
+                        <input type="text" class="modal-form-input" name="user name" minlength="2"
+                            pattern="[a-zA-Zёа-яА-ЯЁ]+" title="Имя должно содержать символы латиницы или кирилицы"
+                            required>
+                        <svg class="modal-form-icon">
+                            <use href="./images/sprite.svg#icon-person-black"></use>
+                        </svg>
+                    </span>
                 </label>
                 <label class="modal-form-field">Телефон
-                    <input type="tel" class="modal-form-input" name="tel">
+                    <span class="modal-form-wrapper">
+                        <input type="tel" class="modal-form-input" name="user-phone" required
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="068-000-00-00">
+                        <svg class="modal-form-icon">
+                            <use href="./images/sprite.svg#icon-phone-black"></use>
+                        </svg>
+                    </span>
+
+
                 </label>
                 <label class="modal-form-field">Почта
-                    <input type="email" class="modal-form-input" name="email">
+                    <span class="modal-form-wrapper">
+                        <input type="email" class="modal-form-input" name="email" required title="marusya@gmail.com">
+                        <svg class="modal-form-icon">
+                            <use href="./images/sprite.svg#icon-email-black"></use>
+                        </svg>
+                    </span>
                 </label>
                 <label class="modal-form-field">Комментарии
-                    <textarea name="user message" class="modal-form-message" placeholder="Ваше сообщение"></textarea>
+                    <textarea name="user message" class="modal-form-message" placeholder="Введите текст"></textarea>
                 </label>
-                <input type="checkbox" class="modal-form-checkbox" id="accept-policy">
-                <label for="accept-policy" class="modal-form-checkbox">Соглашаюсь с рассылкой и принимаю <a href="#"
-                        class="modal-form-label-link">Условия
+                <input type="checkbox" class="modal-form-checkbox visually-hidden" id="accept-policy">
+                <label for="accept-policy" class="modal-form-checkbox-label">Соглашаюсь с рассылкой и принимаю <a
+                        href="#" class="modal-form-label-link">Условия
                         договора</a>
                 </label>
                 <button type="submit" class="modal-form-btn">Отправить</button>

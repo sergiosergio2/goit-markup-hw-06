@@ -187,6 +187,16 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 
 .hero {
   width: 1600px;
@@ -664,12 +674,95 @@ letter-spacing: 3%;
 color: #212121;
 margin-bottom: 12px;
 }
-.modal-form-input
-{
+.modal-form-field {
+  
+font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+line-height: 100%;
+align-content: Left;
+vertical-align: Top;
+letter-spacing: 1%;
+color: #757575;
+margin-bottom: 10px;
+}
+.modal-form-wrapper {
+  display: block;
+  position: relative;
+  margin-top: 4px;
+
+}
+.modal-form-input {
   width: 100%;
   height: 40px;
+  border: 1px solid rgba(21, 21, 21, 0.2);
+ 
+  border-radius: 4px;
+  cursor: pointer;
+  
+  padding-left: 42px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.modal-form-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  fill: #212121;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--accent-color);
+}
+.modal-form-message {
+  width: 100%;
+  margin-top: 4px;
+  height: 120px;
   border-color: rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  cursor: pointer;
+  padding: 12px 16px;
+  resize: none;
+   transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.modal-form-message:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.modal-form-checkbox:checked + .modal-form-checkbox-label::before {
+ 
+  background-image: url(../images/fon-images/icon\ check\ \(1\).png);
+  border-color: var(--accent-color);
+   background-position: 50% 50%;
+ 
+}
+.modal-form-checkbox:focus + .modal-form-checkbox-label::before {
+  outline: 2px;
+  border: 2px solid var(--accent-color);
+
+}
+.modal-form-checkbox-label::before {
+  display: block;
+ 
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+
+  
 }
 
 /* ===============ПОРТФОЛИО========== */
